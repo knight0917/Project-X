@@ -35,6 +35,7 @@ export default function DriverQuality({ driver }) {
         default:
             description = "Unknown driver number.";
     }
+    console.log(description)
     return (
         <div>
             <div>

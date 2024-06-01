@@ -50,7 +50,6 @@ function superNumber(day){
   let superNumber='';
   if(day === 11){
     superNumber = day
-    console.log("11day: "+ superNumber)
   }else{
     console.log("no super no.")
   }

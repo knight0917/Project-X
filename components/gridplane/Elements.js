@@ -1,5 +1,5 @@
 import React from 'react';
-import Allvariable from '../AllVariable';
+// import Allvariable from '../AllVariable';
 
 export default function Elements({ singleDigits }) {
   const wood = singleDigits.includes(4) && singleDigits.includes(3);
@@ -24,7 +24,7 @@ export default function Elements({ singleDigits }) {
         {metal && <p className='text-black'>Metal Element</p>}
         {water && <p className='text-black'>Water Element</p>}
       </div>
-      <Allvariable element={anyConditionMet} />
+      {/* <Allvariable element={anyConditionMet} /> */}
     </div>    
   );
 }
