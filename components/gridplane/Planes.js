@@ -14,29 +14,7 @@ export default function Planes({ singleDigits }) {
   
   const anyConditionMet = success1Digits || mentalDigits || emotionalDigits || practicalDigits || success2Digits || actionDigits || willDigits || thoughtDigits;
   
-  useEffect(() => {
-  const sendPlanesToDB = async()=>{
-      try{
-        const planes= {
-          success1Digits,
-          mentalDigits,
-          emotionalDigits,
-          practicalDigits,
-          success2Digits,
-          actionDigits,
-          willDigits,
-          thoughtDigits
-        };
-
-        const response = await SendToDB(planes);
-        console.log('Planes data added successfully:', response);
-      }catch(error){
-        console.error('Error adding planes data:', error);
-      }
-    }
-
-    sendPlanesToDB();
-  }, []);
+  
 
   return (
     <div>

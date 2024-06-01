@@ -1,4 +1,5 @@
 import React from 'react';
+import Allvariable from '../AllVariable';
 
 export default function Elements({ singleDigits }) {
   const wood = singleDigits.includes(4) && singleDigits.includes(3);
@@ -11,16 +12,19 @@ export default function Elements({ singleDigits }) {
 
   return (
     <div>
-      {anyConditionMet &&
-        <div>
-          <h1 className='text-black font-bold'>You have these Elements:</h1>
-        </div>
-      }
-      {wood && <p className='text-black'>Wood Element</p>}
-      {fire && <p className='text-black'>Fire Element</p>}
-      {earth && <p className='text-black'>Earth Element</p>}
-      {metal && <p className='text-black'>Metal Element</p>}
-      {water && <p className='text-black'>Water Element</p>}
-    </div>
+      <div>
+        {anyConditionMet &&
+          <div>
+            <h1 className='text-black font-bold'>You have these Elements:</h1>
+          </div>
+        }
+        {wood && <p className='text-black'>Wood Element</p>}
+        {fire && <p className='text-black'>Fire Element</p>}
+        {earth && <p className='text-black'>Earth Element</p>}
+        {metal && <p className='text-black'>Metal Element</p>}
+        {water && <p className='text-black'>Water Element</p>}
+      </div>
+      <Allvariable element={anyConditionMet} />
+    </div>    
   );
 }

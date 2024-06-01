@@ -1,5 +1,6 @@
 // pages/driverQuality.js
 import React from 'react';
+import Allvariable from '../AllVariable';
 
 export default function DriverQuality({ driver }) {
     let description = "";
@@ -36,8 +37,11 @@ export default function DriverQuality({ driver }) {
     }
     return (
         <div>
-            <h1 className='text-black font-bold'>Your Driver number is {driver} and its Qualities are:</h1>
-            <p className='text-black'>{description}</p>
+            <div>
+                <h1 className='text-black font-bold'>Your Driver number is {driver} and its Qualities are:</h1>
+                <p className='text-black'>{description}</p>
+            </div>
+            <Allvariable driverQual = {description} />
         </div>
     );
 }
