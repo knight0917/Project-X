@@ -1,6 +1,6 @@
+import React, { useEffect } from 'react';
 
-
-export default function Allvariable({inputDate, inputTime, gender, driver, conductor, superNo}){
+export default function Allvariable({inputDate, inputTime, gender, driver, conductor, superNo, description, elements}){
     let date = inputDate
     console.log(date)
 
@@ -19,11 +19,16 @@ export default function Allvariable({inputDate, inputTime, gender, driver, condu
     let testsuper = superNo
     console.log(testsuper)
     
-    // let driverQ = x
-    // console.log(driverQ)
-    
-    // let elementqual = element
-    // console.log(elementqual)
+    if(description){
+    console.log(description)
+    }
+
+    useEffect(() => {
+        if (elements && elements.length > 0) {
+            let element = elements.join(', ');
+            console.log(element);
+          }
+        }, [elements]);
 
 
 }
