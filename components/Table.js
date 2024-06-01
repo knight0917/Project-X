@@ -6,8 +6,11 @@ import Planes from './gridplane/Planes';
 import Elements from './gridplane/Elements';
 import DriverQuality from './gridplane/DriverQuality';
 
-export default function Table({ inputDate, gender, onRestart }) {
+export default function Table({ inputDate, gender, onRestart, inputTime }) {
   const result = user_input(inputDate);
+  console.log("tabledate", inputDate)
+  console.log("tablegender", gender)
+  console.log("tabletime", inputTime)
 
   return (
     <div>
