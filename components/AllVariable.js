@@ -1,6 +1,6 @@
 import description from "./gridplane/Elements"
 
-export default function Allvariable({inputDate, inputTime, gender, driver, conductor, superNo, driverQual}){
+export default function Allvariable({inputDate, inputTime, gender, driver, conductor, superNo, x}){
     let date = inputDate
     console.log(date)
 
@@ -19,11 +19,15 @@ export default function Allvariable({inputDate, inputTime, gender, driver, condu
     let testsuper = superNo
     console.log(testsuper)
     
-    let driverQ = description
-    console.log(driverQ)
+    // let driverQ = description
+    // console.log(driverQ)
     
     // let elementqual = element
     // console.log(elementqual)
 
 
+}
+
+function x(y){
+    console.log(y)
 }

@@ -42,7 +42,7 @@ export default function DriverQuality({ driver }) {
                 <h1 className='text-black font-bold'>Your Driver number is {driver} and its Qualities are:</h1>
                 <p className='text-black'>{description}</p>
             </div>
-            <Allvariable driverQual = {description} />
+            <Allvariable x = {description} />
         </div>
     );
 }
