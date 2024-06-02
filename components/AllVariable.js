@@ -223,7 +223,7 @@ function AllVariable({ inputDate, inputTime, sex, driverNo, conductorNo, superNo
 
     return (
         <div>
-            {message && <p>{message}</p>}
+            {message && <p className='text-purple-400 font-extrabold tracking-widest italic '>{message}</p>}
         </div>
     );
 }
