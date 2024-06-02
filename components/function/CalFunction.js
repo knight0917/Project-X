@@ -46,9 +46,9 @@ function calDriver(daySum){
 
 //Super number
 function superNumber(day){
-  let superNumber='';
+  let superNumber=false;
   if(day === 11){
-    superNumber = day
+    superNumber = true
   }else{
     console.log("no super no.")
   }
