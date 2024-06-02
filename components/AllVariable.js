@@ -13,9 +13,9 @@ const Allvariable = (
         elements, 
         displayPlane
     }) => {
-
-    const [dob, setDob] = useState(inputDate);
-    const [time, setTime] = useState(inputTime);
+        
+        const [dob, setDob] = useState(inputDate);
+        const [time, setTime] = useState(inputTime);
     const [sex, setSex] = useState(gender);
 
     const [driver_no, setDriver_no] = useState(driver);
@@ -24,19 +24,19 @@ const Allvariable = (
 
     const [plane, setPlane] = useState(displayPlane);
     const [element, setElement] = useState(elements);
-
+    
     const [qualities, setQualities] = useState(description);
     const [elementsList, setElementsList] = useState('');
-
+    
     const [message, setMessage] = useState('');
-
     
     useEffect(() => {
         if (elements && elements.length > 0) {
             setElementsList(elements.join(', '));
         }
     }, [elements]);
-
+    
+    console.log(":::::::::::::::::::::::::::::::::",plane)
 
     useEffect(() => {
         console.log('dob:', dob);

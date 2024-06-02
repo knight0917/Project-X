@@ -43,6 +43,7 @@ export default function Planes({ singleDigits }) {
 
   let displayPlane = activePlanes.join(', ')
 
+
   return (
     <div>
       {anyConditionMet &&
