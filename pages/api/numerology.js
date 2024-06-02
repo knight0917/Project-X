@@ -1,31 +1,4 @@
-// import { sql } from '@vercel/postgres';
 
-// export default async function handler(req, res) {
-//   if (req.method === 'POST') {
-//     try {
-//       const { 
-//         dob, time, sex, driver_no, conductor_no, super_no, plane, element, qualities
-    
-//     } = req.body; // Receive full name from request body
-//       if (!dob || !time || !sex) {
-//         return res.status(400).json({ error: 'Date, Time and Gender are required' });
-//       }
-
-//       await sql`
-//       INSERT INTO numerology (DOB, time, gender, driver_no, conductor_no, super_no, planes, element, driver_qualities)
-//       VALUES (${dob}, ${time}, ${sex}, ${driver_no}, ${conductor_no}, ${super_no}, ${plane}, ${element}, ${qualities})
-//     `;
-      
-//       // Insert full name into database
-//       return res.status(201).json({ message: 'Data added successfully' });
-//     } catch (error) {
-//       return res.status(500).json({ error: error.message });
-//     }
-//   } else {
-//     res.setHeader('Allow', ['POST']);
-//     res.status(405).end(`Method ${req.method} Not Allowed`);
-//   }
-// }
 
 import { sql } from '@vercel/postgres';
 

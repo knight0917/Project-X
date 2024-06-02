@@ -1,7 +1,19 @@
 
 import React, { useEffect, useState } from 'react';
 
-const Allvariable = ({inputDate, inputTime, gender, driver, conductor, superNo, description, elements}) => {
+const Allvariable = (
+    {
+        inputDate, 
+        inputTime, 
+        gender, 
+        driver, 
+        conductor, 
+        superNo, 
+        description, 
+        elements, 
+        displayPlane
+    }) => {
+
     const [dob, setDob] = useState(inputDate);
     const [time, setTime] = useState(inputTime);
     const [sex, setSex] = useState(gender);
@@ -10,22 +22,20 @@ const Allvariable = ({inputDate, inputTime, gender, driver, conductor, superNo, 
     const [conductor_no, setConductor_no] = useState(conductor);
     const [super_no, setSuper_no] = useState(superNo);
 
-    const [plane, setPlane] = useState('disco_dance');
+    const [plane, setPlane] = useState(displayPlane);
     const [element, setElement] = useState(elements);
 
     const [qualities, setQualities] = useState(description);
     const [elementsList, setElementsList] = useState('');
 
     const [message, setMessage] = useState('');
-    
 
+    
     useEffect(() => {
         if (elements && elements.length > 0) {
             setElementsList(elements.join(', '));
         }
     }, [elements]);
-
-    console.log(elementsList)
 
 
     useEffect(() => {
@@ -36,9 +46,9 @@ const Allvariable = ({inputDate, inputTime, gender, driver, conductor, superNo, 
         console.log('conductor_no:', conductor_no);
         console.log('super_no:', super_no);
         console.log('plane:', plane);
-        console.log('element:', element);
+        console.log('element:', elementsList);
         console.log('qualities:', qualities);
-    }, [dob, time, sex, driver_no, conductor_no, super_no, plane, element, qualities]);
+    }, [dob, time, sex, driver_no, conductor_no, super_no, plane, elementsList, qualities]);
 
     const handleSubmit = async () => {
         try {
@@ -65,10 +75,8 @@ const Allvariable = ({inputDate, inputTime, gender, driver, conductor, superNo, 
                 throw new Error(result.error || 'Something went wrong');
             }
 
-            setMessage('Pet added successfully!');
-            setPetName('');
-            setOwnerName('');
-            setSixOrNine('');
+            setMessage('Data added successfully!');
+            
         } catch (err) {
             setMessage(err.message);
         }
