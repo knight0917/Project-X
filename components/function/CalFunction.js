@@ -1,5 +1,5 @@
 
-  // Function to split the date into day, month, and year
+// Function to split the date into day, month, and year
 function splitDate(dateString) {
 
   const dateParts = dateString.split('-');
@@ -15,8 +15,8 @@ function addDigits(number) {
 
   let sum = 0;
   while (number) {
-      sum += number % 10;
-      number = Math.floor(number / 10);
+    sum += number % 10;
+    number = Math.floor(number / 10);
   }
 
   return sum;
@@ -112,7 +112,7 @@ function activityPlanes(singleDigits){
 
 
 //calculate Elements
-function Elements({ singleDigits }) {
+function Elements(singleDigits) {
   const water = singleDigits.includes(1);
   const earth = singleDigits.includes(2) && singleDigits.includes(5) && singleDigits.includes(8);
   const wood = singleDigits.includes(3) && singleDigits.includes(4);
@@ -148,9 +148,9 @@ function Elements({ singleDigits }) {
 
 
 //DriverQualities
-function DriverQuality({ driver }) {
+function DriverQuality(addDriver) {
   let description = "";
-  switch(driver) {
+  switch(addDriver) {
       case 1:
           description = "Leadership, independence, ambition, natural leaders, driven and independent.";
           break;
@@ -170,7 +170,7 @@ function DriverQuality({ driver }) {
           description = "Harmony, nurturing, responsibility, value harmony and nurturing in relationships, and have a sense of responsibility towards others.";
           break;
       case 7:
-          description = "Introspection, spirituality, wisdom,  introspective, spiritual, and wise beyond their years.";
+          description = "Introspection, intution, wisdom, spiritual, and wise beyond their years.";
           break;
       case 8:
           description = "Success, power, wealth, value success and power, and have a talent for creating wealth and abundance.";
@@ -196,9 +196,9 @@ function user_input(dateString) {
   const addDriver = calDriver(day)
   const singleDigits = displaySingleDigits(dateString, addConductor, addDriver);
   const suNumber = superNumber(day)
-  const disPlane = activityPlanes(singleDigits)
   const disElements = Elements(singleDigits)
-  const DriverQual = DriverQuality(driver)
+  const disPlane = activityPlanes(singleDigits)
+  const DriverQual = DriverQuality(addDriver)
 
 
   // console.log('Day:', day, 'Month:', month, 'Year:', year);
@@ -210,8 +210,8 @@ function user_input(dateString) {
   // console.log('Driver no.:', addDriver);
   // console.log('Super no.:', suNumber);
   // console.log(disPlane)
-  console.log(disElements)
-  console.log(DriverQual)
+  // console.log("Elements::",disElements)
+  // console.log("Driver quality::",DriverQual)
   
 
   

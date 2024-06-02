@@ -1,95 +1,117 @@
 
-// import React, { useEffect, useState } from 'react';
-
-// const Allvariable = (
-//     {
-//         inputDate, 
+// export default function AllVariable(
+//     {inputDate, 
+//     inputTime, 
+//     sex, 
+//     driverNo, 
+//     conductorNo, 
+//     superNo, 
+//     plane, 
+//     element, 
+//     driverQualities}
+// ){
+//     console.log(inputDate, 
 //         inputTime, 
-//         gender, 
-//         driver, 
-//         conductor, 
+//         sex, 
+//         driverNo, 
+//         conductorNo, 
 //         superNo, 
-//         description, 
-//         elements, 
-//         displayPlane
-//     }) => {
-        
-//         const [dob, setDob] = useState(inputDate);
-//         const [time, setTime] = useState(inputTime);
-//     const [sex, setSex] = useState(gender);
-
-//     const [driver_no, setDriver_no] = useState(driver);
-//     const [conductor_no, setConductor_no] = useState(conductor);
-//     const [super_no, setSuper_no] = useState(superNo);
-
-//     const [plane, setPlane] = useState(displayPlane);
-//     const [element, setElement] = useState(elements);
-    
-//     const [qualities, setQualities] = useState(description);
-//     const [elementsList, setElementsList] = useState('');
-    
-//     const [message, setMessage] = useState('');
-    
-//     useEffect(() => {
-//         if (elements && elements.length > 0) {
-//             setElementsList(elements.join(', '));
-//         }
-//     }, [elements]);
-    
-//     console.log(":::::::::::::::::::::::::::::::::",plane)
-
-//     useEffect(() => {
-//         console.log('dob:', dob);
-//         console.log('time:', time);
-//         console.log('sex:', sex);
-//         console.log('driver_no:', driver_no);
-//         console.log('conductor_no:', conductor_no);
-//         console.log('super_no:', super_no);
-//         console.log('plane:', plane);
-//         console.log('element:', elementsList);
-//         console.log('qualities:', qualities);
-//     }, [dob, time, sex, driver_no, conductor_no, super_no, plane, elementsList, qualities]);
-
-//     const handleSubmit = async () => {
-//         try {
-//             const response = await fetch('/api/numerology', {
-//                 method: 'POST',
-//                 headers: {
-//                     'Content-Type': 'application/json',
-//                 },
-//                 body: JSON.stringify({
-//                     dob,
-//                     time,
-//                     sex,
-//                     driver_no,
-//                     conductor_no,
-//                     super_no,
-//                     plane,
-//                     element,
-//                     qualities
-//                 }),
-//             });
-
-//             if (!response.ok) {
-//                 const result = await response.json();
-//                 throw new Error(result.error || 'Something went wrong');
-//             }
-
-//             setMessage('Data added successfully!');
-            
-//         } catch (err) {
-//             setMessage(err.message);
-//         }
-//     };
-
-//     return (
-//         <div className='text-black'>
-//             <button onClick={handleSubmit}>Submit</button>
-//             <hr></hr>
-// <br></br>
-//             <p className='text-red-900 italic  tracking-widest font-extrabold'>{message}</p>
-//         </div>
-//     );
+//         plane, 
+//         element, 
+//         driverQualities)
 // }
 
-// export default Allvariable;
+
+
+import React, { useState } from 'react';
+
+function YourComponent() {
+    const [message, setMessage] = useState('');
+    const [inputDate, setInputDate] = useState('');
+    const [inputTime, setInputTime] = useState('');
+    const [sex, setSex] = useState('');
+    const [driverNo, setDriverNo] = useState('');
+    const [conductorNo, setConductorNo] = useState('');
+    const [superNo, setSuperNo] = useState('');
+    const [plane, setPlane] = useState('');
+    const [element, setElement] = useState('');
+    const [driverQualities, setDriverQualities] = useState('');
+
+    const handleSubmit = async () => {
+        try {
+            const response = await fetch('/api/numerology', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    inputDate,
+                    inputTime,
+                    sex,
+                    driverNo,
+                    conductorNo,
+                    superNo,
+                    plane,
+                    element,
+                    driverQualities
+                }),
+            });
+
+            if (!response.ok) {
+                const result = await response.json();
+                throw new Error(result.error || 'Something went wrong');
+            }
+
+            setMessage('Data sent successfully!');
+        } catch (err) {
+            setMessage(err.message);
+        }
+    };
+
+    return (
+        <div>
+            <form onSubmit={handleSubmit}>
+                <label>
+                    Input Date:
+                    <input type="text" value={inputDate} onChange={e => setInputDate(e.target.value)} />
+                </label>
+                <label>
+                    Input Time:
+                    <input type="text" value={inputTime} onChange={e => setInputTime(e.target.value)} />
+                </label>
+                <label>
+                    Sex:
+                    <input type="text" value={sex} onChange={e => setSex(e.target.value)} />
+                </label>
+                <label>
+                    Driver No:
+                    <input type="text" value={driverNo} onChange={e => setDriverNo(e.target.value)} />
+                </label>
+                <label>
+                    Conductor No:
+                    <input type="text" value={conductorNo} onChange={e => setConductorNo(e.target.value)} />
+                </label>
+                <label>
+                    Super No:
+                    <input type="text" value={superNo} onChange={e => setSuperNo(e.target.value)} />
+                </label>
+                <label>
+                    Plane:
+                    <input type="text" value={plane} onChange={e => setPlane(e.target.value)} />
+                </label>
+                <label>
+                    Element:
+                    <input type="text" value={element} onChange={e => setElement(e.target.value)} />
+                </label>
+                <label>
+                    Driver Qualities:
+                    <input type="text" value={driverQualities} onChange={e => setDriverQualities(e.target.value)} />
+                </label>
+                <button type="submit">Submit</button>
+            </form>
+            {message && <p>{message}</p>}
+        </div>
+    );
+}
+
+export default YourComponent;
