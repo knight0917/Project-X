@@ -1,7 +1,6 @@
-// components/LushuGrid.js
 import React, { useState, useEffect } from 'react';
 
-const LushuGrid = ({ number }) => { // Destructure 'number' from props
+const LushuGrid = ({ number }) => { 
   const [digits, setDigits] = useState([]);
   
   useEffect(() => {
@@ -11,9 +10,8 @@ const LushuGrid = ({ number }) => { // Destructure 'number' from props
       setDigits(digitArray);
     };
 
-    // Convert number to array of digits when the component mounts or when 'number' prop changes
     convertNumberToArray();
-  }, [number]); // Include 'number' in the dependency array
+  }, [number]); 
 
   // Create an object to map digits to their respective grid cell contents
   const gridContents = digits.reduce((acc, digit) => {

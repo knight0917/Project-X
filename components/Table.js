@@ -3,14 +3,14 @@ import React from 'react';
 
 import user_input from './function/CalFunction';
 import LushuGrid from './gridplane/LushuGrid';
-import Planes from './gridplane/Planes';
-import Elements from './gridplane/Elements';
+// import Elements from './gridplane/Elements';
 import DriverQuality from './gridplane/DriverQuality';
 
 import Allvariable from './AllVariable';
 
 export default function Table({ inputDate, inputTime, gender, onRestart}) {
   const result = user_input(inputDate);
+  
 
   return (
     <div>
@@ -28,8 +28,11 @@ export default function Table({ inputDate, inputTime, gender, onRestart}) {
         <button onClick={onRestart} className="bg-blue-500 text-white font-semibold px-4 py-2 rounded-md mt-4 hover:bg-blue-600">Restart</button>
       </div>
       <div>
-        <Planes singleDigits={result.singleDigits} />
-        <Elements singleDigits={result.singleDigits} />
+      <div>
+        <h1 className='text-black font-bold'>You have these planes:</h1>
+        <p className='text-black'>{result.disPlane}</p>
+      </div>
+        {/* <Elements singleDigits={result.singleDigits} /> */}
         <DriverQuality driver={result.addDriver} />
       </div>
       <Allvariable 
