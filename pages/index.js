@@ -6,7 +6,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
-    <div>
+    <div className="flex items-center justify-center min-h-screen">
       <MainForm />
       {/* <Elements singleDigits={[2]}/> */}
     </div>

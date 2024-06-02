@@ -76,7 +76,7 @@ export default function MainForm() {
   };
 
   return (
-    <div className="mx-auto max-w-md p-6 bg-white rounded-lg shadow-lg">
+    <div className="mx-auto max-w-md p-6 bg-emerald-200 rounded-lg shadow-lg">
       {currentPage === 1 && (
         <>
           <h2 className="text-black text-xl font-semibold mb-4">Please enter your birth date.</h2>

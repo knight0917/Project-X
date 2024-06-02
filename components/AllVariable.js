@@ -1,6 +1,32 @@
 
-// export default function AllVariable(
-//     {inputDate, 
+// // export default function AllVariable(
+// //     {inputDate, 
+// //     inputTime, 
+// //     sex, 
+// //     driverNo, 
+// //     conductorNo, 
+// //     superNo, 
+// //     plane, 
+// //     element, 
+// //     driverQualities}
+// // ){
+// //     console.log(inputDate, 
+// //         inputTime, 
+// //         sex, 
+// //         driverNo, 
+// //         conductorNo, 
+// //         superNo, 
+// //         plane, 
+// //         element, 
+// //         driverQualities)
+// // }
+
+
+
+// import React, { useState } from 'react';
+
+// function AllVariable(
+//     inputDate, 
 //     inputTime, 
 //     sex, 
 //     driverNo, 
@@ -8,8 +34,9 @@
 //     superNo, 
 //     plane, 
 //     element, 
-//     driverQualities}
-// ){
+//     driverQualities) {
+   
+
 //     console.log(inputDate, 
 //         inputTime, 
 //         sex, 
@@ -19,25 +46,81 @@
 //         plane, 
 //         element, 
 //         driverQualities)
+
+//         const [message, setMessage] = useState('');
+
+//     const handleSubmit = async () => {
+//         const [db_dob, setDb_dob] = useState(inputDate);
+//         const [db_time, setDb_time] = useState(inputTime);
+//         const [db_sex, setDb_sex] = useState(sex);
+//         const [db_driver_no, setDb_driver_no] = useState(driverNo);
+//         const [db_conductor_no, setDb_conductor_no] = useState(conductorNo);
+//         const [db_super_no, setDb_super_no] = useState(superNo);
+//         const [db_plane, setDb_plane] = useState(plane);
+//         const [db_element, setDb_element] = useState(element);
+//         const [db_quality, setDb_quality] = useState(driverQualities);
+
+//         try {
+//             const response = await fetch('/api/numerology', {
+//                 method: 'POST',
+//                 headers: {
+//                     'Content-Type': 'application/json',
+//                 },
+//                 body: JSON.stringify({
+//                     db_dob,
+//                     db_time,
+//                     db_sex,
+//                     db_driver_no,
+//                     db_conductor_no,
+//                     db_super_no,
+//                     db_plane,
+//                     db_element,
+//                     db_quality
+//                 }),
+//             });
+
+//             if (!response.ok) {
+//                 const result = await response.json();
+//                 throw new Error(result.error || 'Something went wrong');
+//             }
+
+//             setMessage('Data sent successfully!');
+//         } catch (err) {
+//             setMessage(err.message);
+//         }
+//     };
+
+//     return (
+//         <div>
+//             <form onSubmit={handleSubmit}>
+//                 <button type="submit" className="bg-red-500 text-white font-semibold px-4 py-2 rounded-md mt-4 hover:bg-blue-60">Submit</button>
+//             </form>
+//             {message && <p>{message}</p>}
+//         </div>
+//     );
 // }
 
+// export default AllVariable;
 
 
 import React, { useState } from 'react';
 
-function YourComponent() {
+function AllVariable({ inputDate, inputTime, sex, driverNo, conductorNo, superNo, plane, element, driverQualities }) {
     const [message, setMessage] = useState('');
-    const [inputDate, setInputDate] = useState('');
-    const [inputTime, setInputTime] = useState('');
-    const [sex, setSex] = useState('');
-    const [driverNo, setDriverNo] = useState('');
-    const [conductorNo, setConductorNo] = useState('');
-    const [superNo, setSuperNo] = useState('');
-    const [plane, setPlane] = useState('');
-    const [element, setElement] = useState('');
-    const [driverQualities, setDriverQualities] = useState('');
 
-    const handleSubmit = async () => {
+    const handleSubmit = async (event) => {
+        event.preventDefault();
+
+        const db_dob = inputDate;
+        const db_time = inputTime;
+        const db_sex = sex;
+        const db_driver_no = driverNo;
+        const db_conductor_no = conductorNo;
+        const db_super_no = Boolean(superNo);
+        const db_plane = plane;
+        const db_element = element;
+        const db_quality = driverQualities;
+
         try {
             const response = await fetch('/api/numerology', {
                 method: 'POST',
@@ -45,15 +128,15 @@ function YourComponent() {
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify({
-                    inputDate,
-                    inputTime,
-                    sex,
-                    driverNo,
-                    conductorNo,
-                    superNo,
-                    plane,
-                    element,
-                    driverQualities
+                    db_dob,
+                    db_time,
+                    db_sex,
+                    db_driver_no,
+                    db_conductor_no,
+                    db_super_no,
+                    db_plane,
+                    db_element,
+                    db_quality
                 }),
             });
 
@@ -71,47 +154,11 @@ function YourComponent() {
     return (
         <div>
             <form onSubmit={handleSubmit}>
-                <label>
-                    Input Date:
-                    <input type="text" value={inputDate} onChange={e => setInputDate(e.target.value)} />
-                </label>
-                <label>
-                    Input Time:
-                    <input type="text" value={inputTime} onChange={e => setInputTime(e.target.value)} />
-                </label>
-                <label>
-                    Sex:
-                    <input type="text" value={sex} onChange={e => setSex(e.target.value)} />
-                </label>
-                <label>
-                    Driver No:
-                    <input type="text" value={driverNo} onChange={e => setDriverNo(e.target.value)} />
-                </label>
-                <label>
-                    Conductor No:
-                    <input type="text" value={conductorNo} onChange={e => setConductorNo(e.target.value)} />
-                </label>
-                <label>
-                    Super No:
-                    <input type="text" value={superNo} onChange={e => setSuperNo(e.target.value)} />
-                </label>
-                <label>
-                    Plane:
-                    <input type="text" value={plane} onChange={e => setPlane(e.target.value)} />
-                </label>
-                <label>
-                    Element:
-                    <input type="text" value={element} onChange={e => setElement(e.target.value)} />
-                </label>
-                <label>
-                    Driver Qualities:
-                    <input type="text" value={driverQualities} onChange={e => setDriverQualities(e.target.value)} />
-                </label>
-                <button type="submit">Submit</button>
+                <button type="submit" className="bg-red-500 text-white font-semibold px-4 py-2 rounded-md mt-4 hover:bg-blue-600">Submit</button>
             </form>
             {message && <p>{message}</p>}
         </div>
     );
 }
 
-export default YourComponent;
+export default AllVariable;

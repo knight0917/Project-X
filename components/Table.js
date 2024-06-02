@@ -11,7 +11,7 @@ export default function Table({ inputDate, inputTime, gender, onRestart}) {
   
 
   return (
-    <div>
+    <div className='text-black'>
       <LushuGrid number={result.singleDigits} />
       
       <div className="">
