@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <div>
       <MainForm />
-      <Elements singleDigits={2}/>
+      <Elements singleDigits={[2]}/>
     </div>
   );
 }
