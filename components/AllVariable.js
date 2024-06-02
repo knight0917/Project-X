@@ -1,64 +1,3 @@
-// import React, { useEffect, useState } from 'react';
-
-// const Allvariable = ({inputDate, inputTime, gender, driver, conductor, superNo, description, elements}) => {
-//     const [dob, setDob] = useState('');
-//     const [time, setTime] = useState('');
-//     const [sex, setSex] = useState('');
-//     const [driver_no, setDriver_no] = useState('');
-//     const [conductor_no, setConductor_no] = useState('');
-//     const [super_no, setSuper_no] = useState('');
-//     const [plane, setPlane] = useState('');
-//     const [element, setElement] = useState('');
-//     const [qualities, setQualities] = useState('');
-
-//     const aeroplane = "disco_dance";
-
-//     useEffect(() => {
-//         setDob(inputDate);
-//         setTime(inputTime);
-//         setSex(gender);
-//         setDriver_no(driver);
-//         setConductor_no(conductor);
-//         setSuper_no(superNo);
-//         setPlane(aeroplane);
-//         setElement(elements);
-//         setQualities(description);
-//     }, [inputDate, inputTime, gender, driver, conductor, superNo, description, elements]);
-
-//     useEffect(() => {
-//         if (elements && elements.length > 0) {
-//             let elementList = elements.join(', ');
-//             console.log(elementList);
-//         }
-//     }, [elements]);
-
-//     console.log(dob);
-//     console.log(time);
-//     console.log(sex);
-//     console.log(driver_no);
-//     console.log(conductor_no);
-//     console.log(super_no);
-//     console.log(plane);
-//     console.log(element);
-//     console.log(qualities);
-
-//     return (
-//         <div>
-//             <p>Date of Birth: {dob}</p>
-//             <p>Time: {time}</p>
-//             <p>Gender: {sex}</p>
-//             <p>Driver Number: {driver_no}</p>
-//             <p>Conductor Number: {conductor_no}</p>
-//             <p>Supervisor Number: {super_no}</p>
-//             <p>Plane: {plane}</p>
-//             <p>Elements: {element}</p>
-//             <p>Qualities: {qualities}</p>
-//         </div>
-//     );
-// }
-
-// export default Allvariable;
-
 
 import React, { useEffect, useState } from 'react';
 
@@ -76,7 +15,7 @@ const Allvariable = ({inputDate, inputTime, gender, driver, conductor, superNo, 
 
     const [qualities, setQualities] = useState(description);
     const [elementsList, setElementsList] = useState('');
-    
+
     const [message, setMessage] = useState('');
     
 
