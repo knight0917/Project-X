@@ -1,4 +1,3 @@
-import React, { useState, useEffect } from 'react';
 
   // Function to split the date into day, month, and year
 function splitDate(dateString) {
@@ -142,7 +141,48 @@ function Elements({ singleDigits }) {
 
   let displayElement = activeElement.join(', ')
 
+  console.log("Active Elements:", activeElement);
+
   return displayElement
+}
+
+
+//DriverQualities
+function DriverQuality({ driver }) {
+  let description = "";
+  switch(driver) {
+      case 1:
+          description = "Leadership, independence, ambition, natural leaders, driven and independent.";
+          break;
+      case 2:
+          description = "Balance, cooperation, diplomacy, value balance and harmony in relationships.";
+          break;
+      case 3:
+          description = "Creativity, optimism, communication, creative, optimistic, and talented communicators.";
+          break;
+      case 4:
+          description = "Stability, structure, practicality, value stability and structure in their lives, and are practical and dependable.";
+          break;
+      case 5:
+          description = "Freedom, adventure, versatility, value freedom and adventure, and are versatile and adaptable.";
+          break;
+      case 6:
+          description = "Harmony, nurturing, responsibility, value harmony and nurturing in relationships, and have a sense of responsibility towards others.";
+          break;
+      case 7:
+          description = "Introspection, spirituality, wisdom,  introspective, spiritual, and wise beyond their years.";
+          break;
+      case 8:
+          description = "Success, power, wealth, value success and power, and have a talent for creating wealth and abundance.";
+          break;
+      case 9:
+          description = "Compassion, humanitarianism, idealism, have a strong sense of compassion and humanitarianism, and may be driven by idealistic pursuits.";
+          break;
+      default:
+          description = "Unknown driver number.";
+          break;
+  }
+  return description
 }
 
 
@@ -158,6 +198,7 @@ function user_input(dateString) {
   const suNumber = superNumber(day)
   const disPlane = activityPlanes(singleDigits)
   const disElements = Elements(singleDigits)
+  const DriverQual = DriverQuality(driver)
 
 
   // console.log('Day:', day, 'Month:', month, 'Year:', year);
@@ -170,10 +211,11 @@ function user_input(dateString) {
   // console.log('Super no.:', suNumber);
   // console.log(disPlane)
   console.log(disElements)
+  console.log(DriverQual)
   
 
   
-  return {addDriver, addConductor, suNumber, singleDigits, disPlane, disElements }
+  return {addDriver, addConductor, suNumber, singleDigits, disPlane, disElements, DriverQual }
 }
 
 
