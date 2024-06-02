@@ -76,13 +76,16 @@ const Allvariable = ({inputDate, inputTime, gender, driver, conductor, superNo, 
     const [petName, setPetName] = useState('');
     const [ownerName, setOwnerName] = useState('');
     const [sixOrNine, setSixOrNine] = useState('');
+    const [elementsList, setElementsList] = useState('');
 
     useEffect(() => {
         if (elements && elements.length > 0) {
-            let elementList = elements.join(', ');
-            console.log('Elements:', elementList);
+            setElementsList(elements.join(', '));
         }
     }, [elements]);
+
+    console.log(elementsList)
+
 
     useEffect(() => {
         console.log('dob:', dob);
