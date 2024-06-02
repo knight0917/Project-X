@@ -22,13 +22,18 @@ export default function Table({ inputDate, inputTime, gender, onRestart}) {
           {result.suNumber && (
             <p id="super" className="bigger-font text-black">Super Number: {result.suNumber}</p>
           )}
+          <p className='text-red-900 italic'>Driver Qualitites: {result.DriverQual}</p>
+          <p className='text-blue-900 ' >Planes : {result.disPlane}</p>
+          <p className='text-brown-900 italic' >Elements : {result.disElements}</p>
+
+
         </div>
         <button onClick={onRestart} className="bg-blue-500 text-white font-semibold px-4 py-2 rounded-md mt-4 hover:bg-blue-600">Restart</button>
       </div>
-      <div>
+      {/* <div>
         <h1 className='text-black font-bold'>You have these planes:</h1>
         <p className='text-black'>{result.disPlane}</p>
-      </div>
+      </div> */}
       <div>
           <AllVariable 
             inputDate={inputDate} 
