@@ -6,7 +6,7 @@ import LushuGrid from './gridplane/LushuGrid';
 // import Elements from './gridplane/Elements';
 import DriverQuality from './gridplane/DriverQuality';
 
-import Allvariable from './AllVariable';
+// import Allvariable from './AllVariable';
 
 export default function Table({ inputDate, inputTime, gender, onRestart}) {
   const result = user_input(inputDate);
@@ -35,14 +35,14 @@ export default function Table({ inputDate, inputTime, gender, onRestart}) {
         {/* <Elements singleDigits={result.singleDigits} /> */}
         <DriverQuality driver={result.addDriver} />
       </div>
-      <Allvariable 
+      {/* <Allvariable 
         inputDate={inputDate} 
         inputTime={inputTime} 
         gender={gender} 
         driver={result.addDriver} 
         conductor={result.addConductor} 
         superNo = {result.suNumber}  
-        />
+        /> */}
     </div>
   );
 }

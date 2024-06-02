@@ -114,38 +114,35 @@ function activityPlanes(singleDigits){
 
 //calculate Elements
 function Elements({ singleDigits }) {
-  const [selectedElements, setSelectedElements] = useState([]);
+  const water = singleDigits.includes(1);
+  const earth = singleDigits.includes(2) && singleDigits.includes(5) && singleDigits.includes(8);
+  const wood = singleDigits.includes(3) && singleDigits.includes(4);
+  const metal = singleDigits.includes(6) && singleDigits.includes(7);
+  const fire = singleDigits.includes(9);
 
-  useEffect(() => {
-    if (!Array.isArray(singleDigits)) {
-      console.error('singleDigits is not an array');
-      return;
-    }
+  let activeElement = [];
 
-    const elementsMap = {
-      1: 'Water Element',
-      2: 'Earth Element',
-      3: 'Wood Element',
-      4: 'Wood Element',
-      5: 'Earth Element',
-      6: 'Metal Element',
-      7: 'Metal Element',
-      8: 'Earth Element',
-      9: 'Fire Element'
-    };
+  if (water) {
+    activeElement.push('Water Elements');
+  }
+  if (earth) {
+    activeElement.push('Earth Elements');
+  }
+  if (wood) {
+    activeElement.push('Wood Elements');
+  }
+  if (metal) {
+    activeElement.push('Metal Elements');
+  }
+  if (fire) {
+    activeElement.push('Fire Elements');
+  }
 
-    const elements = singleDigits.reduce((acc, digit) => {
-      const element = elementsMap[digit];
-      if (element && !acc.includes(element)) {
-        acc.push(element);
-      }
-      return acc;
-    }, []);
+  activeElement.length > 0;
 
-    setSelectedElements(elements);
-  }, [singleDigits]);
-  console.log("fvsv:::::",singleDigits)
-  return selectedElements
+  let displayElement = activeElement.join(', ')
+
+  return displayElement
 }
 
 
