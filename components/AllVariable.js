@@ -66,17 +66,19 @@ const Allvariable = ({inputDate, inputTime, gender, driver, conductor, superNo, 
     const [dob, setDob] = useState(inputDate);
     const [time, setTime] = useState(inputTime);
     const [sex, setSex] = useState(gender);
+
     const [driver_no, setDriver_no] = useState(driver);
     const [conductor_no, setConductor_no] = useState(conductor);
     const [super_no, setSuper_no] = useState(superNo);
+
     const [plane, setPlane] = useState('disco_dance');
     const [element, setElement] = useState(elements);
+
     const [qualities, setQualities] = useState(description);
-    const [message, setMessage] = useState('');
-    const [petName, setPetName] = useState('');
-    const [ownerName, setOwnerName] = useState('');
-    const [sixOrNine, setSixOrNine] = useState('');
     const [elementsList, setElementsList] = useState('');
+    
+    const [message, setMessage] = useState('');
+    
 
     useEffect(() => {
         if (elements && elements.length > 0) {

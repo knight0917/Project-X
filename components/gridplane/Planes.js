@@ -1,6 +1,5 @@
 // components/Planes.js
 import React, { useEffect } from 'react';
-import { SendToDB } from '@/pages/api/connDB';
 
 export default function Planes({ singleDigits }) {
   const success1Digits = singleDigits.includes(4) && singleDigits.includes(5) && singleDigits.includes(6);
