@@ -212,7 +212,7 @@ function AllVariable({ inputDate, inputTime, sex, driverNo, conductorNo, superNo
                     throw new Error(result.error || 'Something went wrong');
                 }
 
-                setMessage('Data sent successfully!');
+                console.log("success!!!")
             } catch (err) {
                 setMessage(err.message);
             }
