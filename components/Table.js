@@ -3,7 +3,8 @@ import React from 'react';
 
 import user_input from './function/CalFunction';
 import LushuGrid from './gridplane/LushuGrid';
-import AllVariable from './AllVariable';
+
+import StaticVaribale from './variable/StaticVaribale';
 
 
 export default function Table({ inputDate, inputTime, gender, onRestart}) {
@@ -44,23 +45,17 @@ export default function Table({ inputDate, inputTime, gender, onRestart}) {
         </div>
         <button onClick={onRestart} className="bg-blue-500 text-white font-semibold px-4 py-2 rounded-md mt-4 hover:bg-blue-600">Restart</button>
       </div>
-      {/* <div>
-        <h1 className='text-black font-bold'>You have these planes:</h1>
-        <p className='text-black'>{result.disPlane}</p>
-      </div> */}
-      <div>
-          <AllVariable 
-            inputDate={inputDate} 
-            inputTime={inputTime} 
-            sex={gender}
-            driverNo={result.addDriver}
-            conductorNo={result.addConductor}
-            superNo={result.suNumber}
-            plane={result.disPlane}
-            element={result.disElements}
-            driverQualities={result.DriverQual}
-              />
-      </div>
+        <StaticVaribale
+          inputDate={inputDate} 
+          inputTime={inputTime} 
+          sex={gender}
+          driverNo={result.addDriver}
+          conductorNo={result.addConductor}
+          superNo={result.suNumber}
+          plane={result.disPlane}
+          element={result.disElements}
+          driverQualities={result.DriverQual}
+            />
     </div>
   );
 }
