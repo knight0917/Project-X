@@ -4,7 +4,7 @@ import React from 'react';
 import user_input from './function/CalFunction';
 import LushuGrid from './gridplane/LushuGrid';
 
-import StaticVaribale from './variable/StaticVaribale';
+import AllVariable from './AllVariable';
 
 
 export default function Table({ inputDate, inputTime, gender, onRestart}) {
@@ -45,7 +45,7 @@ export default function Table({ inputDate, inputTime, gender, onRestart}) {
         </div>
         <button onClick={onRestart} className="bg-blue-500 text-white font-semibold px-4 py-2 rounded-md mt-4 hover:bg-blue-600">Restart</button>
       </div>
-        <StaticVaribale
+        <AllVariable
           inputDate={inputDate} 
           inputTime={inputTime} 
           sex={gender}
