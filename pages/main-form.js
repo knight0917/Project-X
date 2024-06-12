@@ -1,13 +1,14 @@
-
+'use client'
 
 import React, { useState } from 'react';
+import Table from '../components/Table';
 
-export default function matchForm() {
-//   const [currentPage, setCurrentPage] = useState(1);
-//   const [inputDate, setInputDate] = useState('');
-//   const [inputTime, setInputTime] = useState('');
-//   const [gender, setGender] = useState('');
-//   const [warningMessage, setWarningMessage] = useState('');
+export default function MainForm() {
+  const [currentPage, setCurrentPage] = useState(1);
+  const [inputDate, setInputDate] = useState('');
+  const [inputTime, setInputTime] = useState('');
+  const [gender, setGender] = useState('');
+  const [warningMessage, setWarningMessage] = useState('');
 
   const handleNextPage = async() => {
     switch (currentPage) {
@@ -78,22 +79,13 @@ export default function matchForm() {
     <div className="mx-auto max-w-md p-6 bg-emerald-200 rounded-lg shadow-lg">
       {currentPage === 1 && (
         <>
-          <h2 className="text-black text-xl font-semibold mb-4">Please enter your birth details.</h2>
+          <h2 className="text-black text-xl font-semibold mb-4">Please enter your birth date.</h2>
           <input
             type="date"
             id="inputDate"
             name="dateInput"
             value={inputDate}
             onChange={(e) => setInputDate(e.target.value)}
-            className="border border-gray-300 rounded-md px-3 py-2 mb-4 w-full bg-white text-black"
-            required
-          />
-          <input
-            type="time"
-            id="inputTime"
-            name="timeInput"
-            value={inputTime}
-            onChange={(e) => setInputTime(e.target.value)}
             className="border border-gray-300 rounded-md px-3 py-2 mb-4 w-full bg-white text-black"
             required
           />
@@ -101,16 +93,7 @@ export default function matchForm() {
       )}
       {currentPage === 2 && (
         <>
-          <h2 className="text-black text-xl font-semibold mb-4">Please enter your partner birth details.</h2>
-          <input
-            type="date"
-            id="inputDate"
-            name="dateInput"
-            value={inputDate}
-            onChange={(e) => setInputDate(e.target.value)}
-            className="border border-gray-300 rounded-md px-3 py-2 mb-4 w-full bg-white text-black"
-            required
-          />
+          <h2 className="text-black text-xl font-semibold mb-4">Please enter your birth time.</h2>
           <input
             type="time"
             id="inputTime"
@@ -122,12 +105,39 @@ export default function matchForm() {
           />
         </>
       )}
-      {currentPage !== 3 &&(
+      {currentPage === 3 && (
+        <>
+          <h2 className="text-black text-xl font-semibold mb-4">Please select your gender.</h2>
+          <div className='mb-4'>
+            <input
+              type="radio"
+              id="male"
+              name="gender"
+              value="Male"
+              onChange={(e) => setGender(e.target.value)}
+              className="mr-2 rounded-full border border-gray-300 text-gray-700 focus:outline-none focus:border-blue-500"
+            />
+            <label htmlFor="male" className='text-black'>Male 🙋‍♂️</label>
+          </div>
+          <div>
+            <input
+              type="radio"
+              id="female"
+              name="gender"
+              value="Female"
+              onChange={(e) => setGender(e.target.value)}
+              className="mr-2 rounded-full border border-gray-300 text-gray-700 focus:outline-none focus:border-blue-500"
+            />
+            <label htmlFor="female" className='text-black'>Female 🙋‍♀️</label>
+          </div>
+        </>
+      )}
+      {currentPage !== 4 &&(
         <button onClick={handleNextPage} className="bg-blue-500 text-white font-semibold px-4 py-2 rounded-md mt-4 hover:bg-blue-600">Next</button>
       )}
       <span className="text-red-500 block mt-2">{warningMessage}</span>
       {currentPage === 4 && (<>
-        {/* <Table inputDate={inputDate} inputTime={inputTime} gender={gender} onRestart = {handleRestart} /> */}
+        <Table inputDate={inputDate} inputTime={inputTime} gender={gender} onRestart = {handleRestart} />
       </>)}
     </div>
   );
