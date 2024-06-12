@@ -93,14 +93,14 @@ export default function MatchForm() {
 //     <div className="mx-auto max-w-md p-6 bg-emerald-200 rounded-lg shadow-lg">
 //       {currentPage === 1 && (
 //         <>
-//           <h2 className="text-black text-xl font-semibold mb-4">Please enter your birth details.</h2>
+//           <h2 className="text-white text-xl font-semibold mb-4">Please enter your birth details.</h2>
 //           <input
 //             type="date"
 //             id="inputDate"
 //             name="dateInput"
 //             value={inputDate}
 //             onChange={(e) => setInputDate(e.target.value)}
-//             className="border border-gray-300 rounded-md px-3 py-2 mb-4 w-full bg-white text-black"
+//             className="border border-gray-300 rounded-md px-3 py-2 mb-4 w-full bg-white text-white"
 //             required
 //           />
 //           <input
@@ -109,21 +109,21 @@ export default function MatchForm() {
 //             name="timeInput"
 //             value={inputTime}
 //             onChange={(e) => setInputTime(e.target.value)}
-//             className="border border-gray-300 rounded-md px-3 py-2 mb-4 w-full bg-white text-black"
+//             className="border border-gray-300 rounded-md px-3 py-2 mb-4 w-full bg-white text-white"
 //             required
 //           />
 //         </>
 //       )}
 //       {currentPage === 2 && (
 //         <>
-//           <h2 className="text-black text-xl font-semibold mb-4">Please enter your partner birth details.</h2>
+//           <h2 className="text-white text-xl font-semibold mb-4">Please enter your partner birth details.</h2>
 //           <input
 //             type="date"
 //             id="inputDate"
 //             name="dateInput"
 //             value={inputDate}
 //             onChange={(e) => setInputDate(e.target.value)}
-//             className="border border-gray-300 rounded-md px-3 py-2 mb-4 w-full bg-white text-black"
+//             className="border border-gray-300 rounded-md px-3 py-2 mb-4 w-full bg-white text-white"
 //             required
 //           />
 //           <input
@@ -132,7 +132,7 @@ export default function MatchForm() {
 //             name="timeInput"
 //             value={inputTime}
 //             onChange={(e) => setInputTime(e.target.value)}
-//             className="border border-gray-300 rounded-md px-3 py-2 mb-4 w-full bg-white text-black"
+//             className="border border-gray-300 rounded-md px-3 py-2 mb-4 w-full bg-white text-white"
 //             required
 //           />
 //         </>

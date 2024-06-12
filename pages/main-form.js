@@ -76,38 +76,38 @@ export default function MainForm() {
   };
 
   return (
-    <div className="mx-auto max-w-md p-6 bg-emerald-200 rounded-lg shadow-lg">
+    <div className="mx-auto max-w-md p-6 rounded-lg shadow-lg mt-24 border border-gray-500">
       {currentPage === 1 && (
         <>
-          <h2 className="text-black text-xl font-semibold mb-4">Please enter your birth date.</h2>
+          <h2 className="text-white text-xl font-semibold mb-4">Please enter your birth date.</h2>
           <input
             type="date"
             id="inputDate"
             name="dateInput"
             value={inputDate}
             onChange={(e) => setInputDate(e.target.value)}
-            className="border border-gray-300 rounded-md px-3 py-2 mb-4 w-full bg-white text-black"
+            className="border border-gray-300 rounded-md px-3 py-2 mb-4 w-full bg-black text-white hover:bg-gray-700"
             required
           />
         </>
       )}
       {currentPage === 2 && (
         <>
-          <h2 className="text-black text-xl font-semibold mb-4">Please enter your birth time.</h2>
+          <h2 className="text-white text-xl font-semibold mb-4">Please enter your birth time.</h2>
           <input
             type="time"
             id="inputTime"
             name="timeInput"
             value={inputTime}
             onChange={(e) => setInputTime(e.target.value)}
-            className="border border-gray-300 rounded-md px-3 py-2 mb-4 w-full bg-white text-black"
+            className="border border-gray-300 rounded-md px-3 py-2 mb-4 w-full bg-black text-white hover:bg-gray-700"
             required
           />
         </>
       )}
       {currentPage === 3 && (
         <>
-          <h2 className="text-black text-xl font-semibold mb-4">Please select your gender.</h2>
+          <h2 className="text-white text-xl font-semibold mb-4">Please select your gender.</h2>
           <div className='mb-4'>
             <input
               type="radio"
@@ -117,7 +117,7 @@ export default function MainForm() {
               onChange={(e) => setGender(e.target.value)}
               className="mr-2 rounded-full border border-gray-300 text-gray-700 focus:outline-none focus:border-blue-500"
             />
-            <label htmlFor="male" className='text-black'>Male 🙋‍♂️</label>
+            <label htmlFor="male" className='text-white'>Male 🙋‍♂️</label>
           </div>
           <div>
             <input
@@ -128,12 +128,12 @@ export default function MainForm() {
               onChange={(e) => setGender(e.target.value)}
               className="mr-2 rounded-full border border-gray-300 text-gray-700 focus:outline-none focus:border-blue-500"
             />
-            <label htmlFor="female" className='text-black'>Female 🙋‍♀️</label>
+            <label htmlFor="female" className='text-white'>Female 🙋‍♀️</label>
           </div>
         </>
       )}
       {currentPage !== 4 &&(
-        <button onClick={handleNextPage} className="bg-blue-500 text-white font-semibold px-4 py-2 rounded-md mt-4 hover:bg-blue-600">Next</button>
+        <button onClick={handleNextPage} className=" border border-gray-300  text-white font-semibold px-4 py-2 rounded-md mt-4 hover:bg-blue-600">Next</button>
       )}
       <span className="text-red-500 block mt-2">{warningMessage}</span>
       {currentPage === 4 && (<>

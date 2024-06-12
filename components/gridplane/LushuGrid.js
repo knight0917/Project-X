@@ -36,7 +36,7 @@ const LushuGrid = ({ number }) => {
     <div className='mt-4'>
       <div className="grid grid-cols-3 gap-4">
         {gridLayout.map((cell) => (
-          <div id={cell.id} className="cell bg-gray-200 border border-gray-400 rounded-md p-4 text-center text-black" key={cell.id}>
+          <div id={cell.id} className="cell bg-black-900 border border-gray-400 rounded-md p-4 text-center text-white" key={cell.id}>
             {gridContents[cell.value] || ''}
           </div>
         ))}

@@ -12,38 +12,38 @@ export default function Table({ inputDate, inputTime, gender, onRestart}) {
   
 
   return (
-    <div className='text-black'>
+    <div className='text-gray-500'>
       <p className='font-bold'>Your DOB & time: {inputDate} {inputTime}</p>
       <LushuGrid number={result.singleDigits} />
       <div className="">
-        <h2 className="font-bold">Numerology Results:</h2>
+        <h2 className="font-bold mt-4">Numerology Results:</h2>
         <div id="numerologyResults">
-          <p id="driver" className="bigger-font text-black">Driver Number: {result.addDriver}</p>
-          <p id="conductor" className="bigger-font text-black">Conductor Number: {result.addConductor}</p>
+          <p id="driver" className="bigger-font text-white-500 italic">Driver Number: {result.addDriver}</p>
+          <p id="conductor" className="bigger-font text-gray-500 italic">Conductor Number: {result.addConductor}</p>
 
           {result.suNumber && (
-              <p id="super" className="text-black"> Super number: 11</p>
+              <p id="super" className="text-gray-500"> Super number: 11</p>
           )}
 
           {result.disPlane && (
             <div>
-              <p className='font-bold'>Planes:</p>
-              <p className='text-blue-900'> {result.disPlane}</p>
+              <p className='font-bold mt-4'>Planes:</p>
+              <p className='italic'> {result.disPlane}</p>
             </div>
           )}
 
           {result.disElements && (
             <div>
-              <p className='font-bold'>Elements:</p>
-              <p className='text-brown-900 italic'> {result.disElements}</p>
+              <p className='font-bold mt-4'>Elements:</p>
+              <p className='italic'> {result.disElements}</p>
             </div>
           )}
 
-          <p className='font-bold'>Driver Qualitites:</p>
-          <p className='text-red-900 italic'> {result.DriverQual}</p>
+          <p className='font-bold mt-4'>Driver Qualitites:</p>
+          <p className='text-gray-300 italic'> {result.DriverQual}</p>
 
         </div>
-        <button onClick={onRestart} className="bg-blue-500 text-white font-semibold px-4 py-2 rounded-md mt-4 hover:bg-blue-600">Restart</button>
+        <button onClick={onRestart} className="bg-sky-950 text-white font-semibold px-4 py-2 rounded-md mt-4 hover:bg-blue-600">Restart</button>
       </div>
         <AllVariable
           inputDate={inputDate} 
