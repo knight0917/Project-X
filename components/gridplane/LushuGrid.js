@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 
-const LushuGrid = ({ number }) => { 
+const LushuGrid = ({ number }) => {
   const [digits, setDigits] = useState([]);
-  
+
   useEffect(() => {
     // Function to convert the number to an array of digits
     const convertNumberToArray = () => {
@@ -11,7 +11,7 @@ const LushuGrid = ({ number }) => {
     };
 
     convertNumberToArray();
-  }, [number]); 
+  }, [number]);
 
   // Create an object to map digits to their respective grid cell contents
   const gridContents = digits.reduce((acc, digit) => {
@@ -36,7 +36,12 @@ const LushuGrid = ({ number }) => {
     <div className='mt-4'>
       <div className="grid grid-cols-3 gap-4">
         {gridLayout.map((cell) => (
-          <div id={cell.id} className="cell bg-black-900 border border-gray-400 rounded-md p-4 text-center text-white" key={cell.id}>
+          <div
+            id={cell.id}
+            className="cell bg-black-900 border border-gray-400 rounded-md p-4 text-center text-white flex items-center justify-center"
+            key={cell.id}
+            style={{ height: '50px' }} // Fixed height
+          >
             {gridContents[cell.value] || ''}
           </div>
         ))}
