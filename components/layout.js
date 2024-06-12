@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ["latin"] });
 export default function Layout({ children }) {
   return (
     <>
-    <Header />
+    {/* <Header /> */}
       <main className={`${inter.className} flex flex-col min-h-screen antialiased`}>
         {children}
       </main>
