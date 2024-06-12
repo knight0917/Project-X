@@ -11,12 +11,12 @@ export default function Home() {
         <ul>
           <li>
             <Link href="/MainForm" legacyBehavior>
-              <a>Know your numerology</a>
+               Know your numerology
             </Link>
           </li>
           <li>
             <Link href="/matchForm" legacyBehavior>
-              <a>Match your partner</a>
+              Match your partner
             </Link>
           </li>
         </ul>
