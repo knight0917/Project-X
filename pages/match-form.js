@@ -1,14 +1,50 @@
 
 
 import React, { useState } from 'react';
+import Link from 'next/link';
+import Image
 
+from 'next/image';
 export default function MatchForm() {
 
-
   return (
-    <div className='flex items-center justify-center'>
-      Inside match-form
-    </div>
+    <>
+    <article className="pt-16 sm:pt-24 flex-grow">
+        <div className="mx-auto max-w-2xl px-4 md:px-0">
+        <Link
+              className="dark:hover:text-gray-100 inline-flex items-center py-4 dark:text-gray-300 text-gray-500 hover:text-gray-700 text-sm sm:text-base"
+              href="/"
+            >
+              <svg
+                stroke="currentColor"
+                fill="none"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                height="1em"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <line x1="19" y1="12" x2="5" y2="12"></line>
+                <polyline points="12 19 5 12 12 5"></polyline>
+              </svg>{" "}
+              <span className="ml-1">home</span>
+            </Link>
+          </div>
+  <div className="mx-auto max-w-md p-6 rounded-lg shadow-lg mt-24 border border-gray-500">
+    <h1>YOU ARE INSDIE MATCH-FORM ____ selmun bhai</h1>
+    <Image
+      src="/images/dowg.gif"
+      alt="premiere pro export feature image"
+      width={1280}
+      height={720}
+      priority={true}
+    />
+  </div>
+  
+  </article>
+  </>
   );
 }
 
