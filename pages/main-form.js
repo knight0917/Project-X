@@ -28,7 +28,7 @@ export default function MainForm() {
         break;
       case 3:
         if (gender !== '') {
-          console.log('Form submitted:', { inputDate, inputTime, gender });
+          // console.log('Form submitted:', { inputDate, inputTime, gender });
           setCurrentPage(4);
         }else {
             setWarningMessage('Please select your gender.');
@@ -44,7 +44,7 @@ export default function MainForm() {
             };
 
             const response = await sendDataToDB(formData);
-            console.log('Data added successfully:', response);
+            // console.log('Data added successfully:', response);
           // Optionally, reset form fields or show a success message
 
           // Now send numerology data
@@ -55,7 +55,7 @@ export default function MainForm() {
             // Add other numerology data fields here as needed
             };
             const numerologyResponse = await sendNumerologyDataToDB(numerologyData);
-            console.log('Numerology data added successfully:', numerologyResponse);
+            // console.log('Numerology data added successfully:', numerologyResponse);
           } catch (error) {
             console.error('Error adding data:', error);
             // Handle error (e.g., display error message to user)
