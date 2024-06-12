@@ -34,9 +34,9 @@ export default function MatchForm() {
           </div>
   <div className="mx-auto max-w-md p-6 rounded-lg shadow-lg mt-24 border border-gray-500">
     <h1>YOU ARE INSDIE MATCH-FORM ____ selmun bhai</h1>
-    <Image
+    <img
       src="/images/dowg.gif"
-      alt="premiere pro export feature image"
+      alt="hooman like thing image"
       width={1280}
       height={720}
       priority={true}
