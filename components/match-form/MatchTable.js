@@ -39,8 +39,8 @@ export default function MatchTable({ inputDate, inputTime, gender, partnerInputD
                     </div>
                 )}
 
-                <p className='font-bold mt-4'>Driver Qualitites:</p>
-                <p className='text-gray-300 italic'> {result.DriverQual}</p>
+                {/* <p className='font-bold mt-4'>Driver Qualitites:</p>
+                <p className='text-gray-300 italic'> {result.DriverQual}</p> */}
             </div>
       </div>
         <div className="mt-4">
@@ -69,8 +69,8 @@ export default function MatchTable({ inputDate, inputTime, gender, partnerInputD
                     </div>
                 )}
 
-                <p className='font-bold mt-4'>Driver Qualitites:</p>
-                <p className='text-gray-300 italic'> {partnerResult.DriverQual}</p>
+                {/* <p className='font-bold mt-4'>Driver Qualitites:</p>
+                <p className='text-gray-300 italic'> {partnerResult.DriverQual}</p> */}
             </div>
       </div>
         <button onClick={restart} className="bg-sky-950 text-white font-semibold px-4 py-2 rounded-md mt-4 hover:bg-blue-600">Restart</button>
