@@ -2,6 +2,7 @@
 import React from 'react';
 import user_input from '../function/CalFunction';
 import LushuGrid from '../gridplane/LushuGrid';
+import match from '../function/MatchFunction';
 
 // import AllVariable from './AllVariable';
 
@@ -9,6 +10,8 @@ import LushuGrid from '../gridplane/LushuGrid';
 export default function MatchTable({ inputDate, inputTime, gender, partnerInputDate, partnerInputTime, partnerGender, restart}) {
   const result = user_input(inputDate);
   const partnerResult = user_input(partnerInputDate);
+
+  const matchResult = match(result.addDriver, partnerResult.addDriver)
   
 
   return (
@@ -19,7 +22,7 @@ export default function MatchTable({ inputDate, inputTime, gender, partnerInputD
             <h2 className="font-bold mt-4">Numerology Results:</h2>
             <div id="numerologyResults">
                 <p id="driver" className="bigger-font text-white-500 italic">Driver Number: {result.addDriver}</p>
-                <p id="conductor" className="bigger-font text-gray-500 italic">Conductor Number: {result.addConductor}</p>
+                {/* <p id="conductor" className="bigger-font text-gray-500 italic">Conductor Number: {result.addConductor}</p>
 
                 {result.suNumber && (
                     <p id="super" className="text-gray-500"> Super number: 11</p>
@@ -37,7 +40,7 @@ export default function MatchTable({ inputDate, inputTime, gender, partnerInputD
                         <p className='font-bold mt-4'>Elements:</p>
                         <p className='italic'> {result.disElements}</p>
                     </div>
-                )}
+                )} */}
 
                 {/* <p className='font-bold mt-4'>Driver Qualitites:</p>
                 <p className='text-gray-300 italic'> {result.DriverQual}</p> */}
@@ -49,7 +52,7 @@ export default function MatchTable({ inputDate, inputTime, gender, partnerInputD
             <h2 className="font-bold mt-4">Numerology Results:</h2>
             <div id="numerologyResults">
                 <p id="driver" className="bigger-font text-white-500 italic">Driver Number: {partnerResult.addDriver}</p>
-                <p id="conductor" className="bigger-font text-gray-500 italic">Conductor Number: {partnerResult.addConductor}</p>
+                {/* <p id="conductor" className="bigger-font text-gray-500 italic">Conductor Number: {partnerResult.addConductor}</p>
 
                 {partnerResult.suNumber && (
                     <p id="super" className="text-gray-500"> Super number: 11</p>
@@ -67,10 +70,11 @@ export default function MatchTable({ inputDate, inputTime, gender, partnerInputD
                         <p className='font-bold mt-4'>Elements:</p>
                         <p className='italic'> {partnerResult.disElements}</p>
                     </div>
-                )}
+                )} */}
 
                 {/* <p className='font-bold mt-4'>Driver Qualitites:</p>
                 <p className='text-gray-300 italic'> {partnerResult.DriverQual}</p> */}
+                <p className='text-gray-300 text-bold'>{matchResult}</p>
             </div>
       </div>
         <button onClick={restart} className="bg-sky-950 text-white font-semibold px-4 py-2 rounded-md mt-4 hover:bg-blue-600">Restart</button>

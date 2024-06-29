@@ -152,16 +152,16 @@ function DriverQuality(addDriver) {
   let description = "";
   switch(addDriver) {
       case 1:
-          description = "Independence, Ambition, Natural Leaders, Driven, Business, Management.";
+          description = "Independent(sometimes lead to islolation), Ambitious(high ambitions and drive can lead to stress), Natural Leaders, Decisiveness, Business, Management, Entrepreneurship, possession of a strong sense of originality and creativity, Stub-born, overconfidence, Judgmental, dominance in relationship, Supportive partners, Communicative, Public speaking.";
           break;
       case 2:
-          description = "Balance, cooperation, diplomacy, value balance and harmony in relationships.";
+          description = "Balance, Natural diplomats, sensitive and intuitive, empathic and caring, cooperation and team work, patience, Adaptability and flexibility, avoidance of conflict, romantic and loyal, diplomacy, value balance and harmony in relationships, supportive, inner contradiction or conflicting emotion, duality(which give them broader perspective of life).";
           break;
       case 3:
           description = "Creativity, optimism, communication, creative, optimistic, and talented communicators.";
           break;
       case 4:
-          description = "Structure, practicality, value stability and structure in their lives, and are practical and dependable.";
+          description = "Structure, practicality, value stability and structure in their lives, and are practical and dependable, Sharp memories.";
           break;
       case 5:
           description = "Balance, Freedom, adventure, versatility, value freedom and adventure, and are versatile and adaptable.";
