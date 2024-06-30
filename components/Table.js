@@ -54,7 +54,6 @@ export default function Table({ inputDate, inputTime, gender, onRestart}) {
           superNo={result.suNumber}
           plane={result.disPlane}
           element={result.disElements}
-          driverQualities={result.DriverQual}
             />
     </div>
   );

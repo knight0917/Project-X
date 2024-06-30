@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 
-function AllVariable({ inputDate, inputTime, sex, driverNo, conductorNo, superNo, plane, element, driverQualities }) {
+function AllVariable({ inputDate, inputTime, sex, driverNo, conductorNo, superNo, plane, element }) {
     const [message, setMessage] = useState('');
 
     useEffect(() => {
@@ -13,7 +13,6 @@ function AllVariable({ inputDate, inputTime, sex, driverNo, conductorNo, superNo
         const db_super_no = Boolean(superNo);
         const db_plane = plane;
         const db_element = element;
-        const db_quality = driverQualities;
 
         const sendData = async () => {
             try {
@@ -30,8 +29,7 @@ function AllVariable({ inputDate, inputTime, sex, driverNo, conductorNo, superNo
                         db_conductor_no,
                         db_super_no,
                         db_plane,
-                        db_element,
-                        db_quality
+                        db_element
                     }),
                 });
 
@@ -47,7 +45,7 @@ function AllVariable({ inputDate, inputTime, sex, driverNo, conductorNo, superNo
         };
 
         sendData();
-    }, [inputDate, inputTime, sex, driverNo, conductorNo, superNo, plane, element, driverQualities]);
+    }, [inputDate, inputTime, sex, driverNo, conductorNo, superNo, plane, element]);
 
     return (
         <div>
