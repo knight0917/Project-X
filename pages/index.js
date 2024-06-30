@@ -18,11 +18,6 @@ export default function Home() {
                know your numerology
             </Link>
           </li>
-          <li>
-            <Link  className="  hover:underline" href="/match-form">
-              match yours with other
-            </Link>
-          </li>
         </ul>
       </nav>
       <div>
