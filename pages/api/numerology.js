@@ -6,7 +6,7 @@ export default async function handler(req, res) {
     if (req.method === 'POST') {
         try {
             const { 
-                db_dob, db_time, db_sex, db_driver_no, db_conductor_no, db_super_no, db_plane, db_element, db_quality 
+                db_dob, db_time, db_sex, db_driver_no, db_conductor_no, db_super_no, db_plane, db_element 
             } = req.body;
 
             // Check for required fields
@@ -16,8 +16,8 @@ export default async function handler(req, res) {
 
             // Insert data into the database
             await sql`
-                INSERT INTO numerology (DOB, time, gender, driver_no, conductor_no, super_no, planes, element, driver_qualities)
-                VALUES (${db_dob}, ${db_time}, ${db_sex}, ${db_driver_no}, ${db_conductor_no}, ${db_super_no}, ${db_plane}, ${db_element}, ${db_quality})
+                INSERT INTO numerology (DOB, time, gender, driver_no, conductor_no, super_no, planes, element)
+                VALUES (${db_dob}, ${db_time}, ${db_sex}, ${db_driver_no}, ${db_conductor_no}, ${db_super_no}, ${db_plane}, ${db_element})
             `;
 
             return res.status(201).json({ message: 'Data added successfully' });
