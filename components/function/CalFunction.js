@@ -158,25 +158,25 @@ function DriverQuality(addDriver) {
           description = "Balance, Natural diplomats, sensitive and intuitive, empathic and caring, cooperation and team work, patience, Adaptability and flexibility, avoidance of conflict, romantic and loyal, diplomacy, value balance and harmony in relationships, supportive, inner contradiction or conflicting emotion, duality(which give them broader perspective of life).";
           break;
       case 3:
-          description = "Creativity, optimism, communication, creative, optimistic, and talented communicators.";
+          description = "Creativity, expressive, optimism, communication, emotional depth, Teacher, optimistic, and talented communicators, Inspiring and Motivational, outwardly cheerful,  mood swings, overly affected by criticism.";
           break;
       case 4:
-          description = "Structure, practicality, value stability and structure in their lives, and are practical and dependable, Sharp memories.";
+          description = "Loyal, Structure, practicality, value stability and structure in their lives, and are practical and dependable, Sharp memories, steadfast in their relationships and commitments, practical and realistic, Hard Work and Discipline, Detail-Oriented and analytical, Security-Seeking, Stubbornness.";
           break;
       case 5:
-          description = "Balance, Freedom, adventure, versatility, value freedom and adventure, and are versatile and adaptable.";
+          description = "Adventurous and Freedom-Loving, Balance, Dynamic and Versatile(dynamic nature allows them to handle different tasks and challenges with ease), Curious and Inquisitive(always looking for new information), versatile and adaptable, Social(easily make friends) and Charismatic, Restless and Impulsive, may struggle with routine and commitment.";
           break;
       case 6:
-          description = "Harmony, nurturing, responsibility, value harmony and nurturing in relationships, and have a sense of responsibility towards others.";
+          description = "Harmony, nurturing and care, responsibility, value harmony and nurturing in relationships, and have a sense of responsibility towards others, frequently involved in community service or roles that allow them to help those in need.";
           break;
       case 7:
-          description = "Introspection, intution, wisdom, spiritual, and wise beyond their years.";
+          description = "Intellectual and Analytical, wisdom, Curiosity and Research-Oriented, spiritual, and wise beyond their years, Solitude and Independence, Mysterious Aura(may choose to keep their personal lives private), They question the status quo and are not easily swayed by popular opinion, Philosophical Mindset, Self-Sufficient and Resilient.";
           break;
       case 8:
-          description = "Success, power, wealth, value success and power, and have a talent for creating wealth and abundance.";
+          description = "Ambition and Determination, These individuals naturally possess leadership qualities, often seen in positions of authority and are capable of making tough decisions, Material success, power, wealth, value success and power, and have a talent for creating wealth and abundance, Discipline and Efficiency, demonstrate great resilience and inner strength, These individuals have a strong sense of fairness and often seek to bring harmony and balance to their surroundings, they may struggle with expressing emotions and might come across as reserved or distant.";
           break;
       case 9:
-          description = "Fame, Compassion, humanitarianism, idealism, have a strong sense of compassion and humanitarianism, and may be driven by idealistic pursuits.";
+          description = "Strong sense of idealism and a vision for the future,  often seek to inspire and uplift others, aiming for a higher purpose in life, Fame, Compassion, humanitarianism, idealism, have a strong sense of compassion and humanitarianism, and may be driven by idealistic pursuits, strong appreciation for beauty and expression in various forms, whether it be art, music, or literature, Generous and Selfless, Intuitive and Spiritual, they are emotionally resilient and capable of dealing with life's challenges, Broad-Minded and Tolerant, Philosophical and Thoughtful, Magnetic and Charismatic, Overly Idealistic, Perfectionism.";
           break;
       default:
           description = "Unknown driver number.";
