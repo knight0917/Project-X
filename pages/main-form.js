@@ -107,7 +107,7 @@ export default function MainForm() {
           {currentPage === 1 && (
             <>
               <h2 className="dark:text-white text-xl font-semibold mb-4">
-                Please enter your birth date.
+                Date of birth
               </h2>
               <input
                 type="date"
@@ -123,7 +123,7 @@ export default function MainForm() {
           {currentPage === 2 && (
             <>
               <h2 className="dark:text-white text-xl font-semibold mb-4">
-                Please enter your birth time.
+                Time of birth
               </h2>
               <input
                 type="time"
@@ -139,7 +139,7 @@ export default function MainForm() {
           {currentPage === 3 && (
             <>
               <h2 className="dark:text-white text-xl font-semibold mb-4">
-                Please select your gender.
+                Gender
               </h2>
               <div className="mb-4">
                 <input

@@ -22,7 +22,7 @@ export default function Table({ inputDate, inputTime, gender, onRestart }) {
       </div>
       <LushuGrid number={result.singleDigits} />
       <div className="">
-        <h2 className="font-bold mt-4">Numerology Results:</h2>
+        {/* <h2 className="font-bold mt-4">Numerology Results:</h2> */}
         <div id="numerologyResults" className="">
           <p id="driver" className="bigger-font dark:text-[#A1A1AA] font-light">
             Driver Number: {result.addDriver}
