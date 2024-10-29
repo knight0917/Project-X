@@ -65,7 +65,7 @@ export default function Table({ inputDate, inputTime, gender, onRestart }) {
         </div>
         <button
           onClick={onRestart}
-          className="bg-black dark:bg-white dark:text-black text-white font-semibold px-4 py-2 rounded-md mt-4 dark:hover:bg-blue-600 hover:bg-black  border border-black"
+          className="bg-black dark:bg-white dark:text-black text-white font-semibold px-4 py-2 rounded-md mt-4 dark:hover:bg-blue-600  dark:hover:bg-black dark:hover:text-white dark:hover:border-gray-500  hover:bg-black  border border-black"
         >
           Restart
         </button>
